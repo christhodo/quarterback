@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-title>
+    Quarterbacks
+  </mat-card-title>
+  <mat-card-content>
+    <mat-list data-cy="quarterbacks-list">
+      <mat-list-item
+        *ngFor="let quarterback of quarterbacks"
+        attr.data-cy="quarterback-{{ quarterback.id }}-item"
+        class="mat-list-option"
+        (click)="selected.emit(quarterback)"
+      >
+        <span
+          matLine
+          attr.data-cy="quarterback-{{ quarterback.id }}-item-title"
+          >{{ quarterback.title }}</span
+        >
+        <button
+          *ngIf="!readonly"
+          attr.data-cy="delete-quarterback-{{ quarterback.id }}-btn"
+          mat-icon-button
+          type="button"
+          color="warn"
+          (click)="deleted.emit(quarterback); $event.stopImmediatePropagation()"
+        >
+          <mat-icon>clear</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

@@ -1,1 +1,1 @@
-export * from './lib/api-interfaces';
+export { Message, Quarterback } from './lib/api-interfaces';

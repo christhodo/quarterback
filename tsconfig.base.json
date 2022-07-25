@@ -18,7 +18,12 @@
     "paths": {
       "@quarterback-angular/api-interfaces": [
         "libs/api-interfaces/src/index.ts"
-      ]
+      ],
+      "@quarterback-angular/core-data": ["libs/core-data/src/index.ts"],
+      "@quarterback-angular/core-state": ["libs/core-state/src/index.ts"],
+      "@quarterback-angular/material": ["libs/material/src/index.ts"],
+      "@quarterback-angular/ui-login": ["libs/ui-login/src/index.ts"],
+      "@quarterback-angular/environment": ["libs/environment/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

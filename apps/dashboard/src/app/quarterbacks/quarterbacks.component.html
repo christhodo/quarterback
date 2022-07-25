@@ -1,0 +1,18 @@
+<div class="component-container">
+  <div class="list-component">
+    <quarterback-angular-quarterbacks-list
+      [quarterbacks]="allQuarterbacks$ | async"
+      (selected)="selectQuarterback($event)"
+      (deleted)="deleteQuarterback($event)"
+    >
+    </quarterback-angular-quarterbacks-list>
+  </div>
+  <div class="details-component">
+    <quarterback-angular-quarterback-details
+      [quarterback]="selectedQuarterback$ | async"
+      (saved)="saveQuarterback($event)"
+      (cancelled)="resetForm()"
+    >
+    </quarterback-angular-quarterback-details>
+  </div>
+</div>
