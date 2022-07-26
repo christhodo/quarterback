@@ -13,6 +13,7 @@ import { QuarterbackDetailsComponent } from './quarterbacks/quarterback-details/
 import { QuarterbacksListComponent } from './quarterbacks/quarterbacks-list/quarterbacks-list.component';
 import { QuarterbacksComponent } from './quarterbacks/quarterbacks.component';
 import { FormsModule } from '@angular/forms';
+import { UiLoginModule } from '@quarterback-angular/ui-login';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     MaterialModule,
     RoutingModule,
+    UiLoginModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
